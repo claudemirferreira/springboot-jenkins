@@ -12,11 +12,6 @@ pipeline {
             }
             steps {
                 sh "mvn package -Dmaven.test.skip=true"
-                script {
-                    pom = readMavenPom file: 'pom.xml'
-                    POM_VERSION = pom.version
-                }
-                stash 'source'
             }
         }
     }
