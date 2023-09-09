@@ -1,10 +1,5 @@
 pipeline {
-    agente { 
-        docker { 
-            imagem 'maven:3-alpine' 
-            args '-u root' 
-        } 
-    }
+    agent any
 
     environment {
         POM_VERSION = ""
