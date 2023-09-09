@@ -1,5 +1,10 @@
 pipeline {
-    agent none
+    agent any
+
+    environment {
+        POM_VERSION = ""
+    }
+
     stages {
         stage('Build') {
             agent {
